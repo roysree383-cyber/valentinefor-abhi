@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Abhi 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="./music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="music-btn" onclick="playMusic()">▶️ Play music</button>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Hey Abhi 😌💖</h1>
+    <p>I made something for you…</p>
+    <img src="./pic1.jpg" class="hero-img" alt="Abhi">
+  </section>
+
+  <!-- SLIDESHOW -->
+  <section class="slideshow">
+    <div class="slides">
+      <img src="./pic2.jpg" alt="">
+      <img src="./pic3.jpg" alt="">
+      <img src="./pic4.jpg" alt="">
+      <img src="./pic5.jpg" alt="">
+    </div>
+  </section>
+
+  <!-- MESSAGE -->
+  <section class="message">
+    <p>
+      <strong>Pupuuu, you are the most amazing, handsome, cutesttt man ever.</strong><br><br>
+      You are the best — I never thought I’d be loved by someone like you.<br>
+      I’ll always stay with you, forever.<br><br>
+      <span class="signature">Mon loves you a lot 💕</span>
+    </p>
+  </section>
+
+  <!-- PROPOSAL -->
+  <section class="proposal">
+    <h2>Will you be my Valentine? 💌</h2>
+
+    <div class="buttons">
+      <button id="noBtn">NO 😒</button>
+      <button onclick="sayYes()">😌 OBVIOUSLY YES</button>
+    </div>
+
+    <p id="reaction"></p>
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+    function playMusic() {
+      document.getElementById("bgMusic").play();
+    }
+
+    const noBtn = document.getElementById("noBtn");
+    const reaction = document.getElementById("reaction");
+
+    function moveNo() {
+      reaction.innerText = "How dare you 😠💢";
+      const x = Math.random() * (window.innerWidth - 120);
+      const y = Math.random() * (window.innerHeight - 120);
+      noBtn.style.position = "absolute";
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+
+    noBtn.addEventListener("mouseover", moveNo);
+    noBtn.addEventListener("click", moveNo);
+
+    function sayYes() {
+      reaction.innerText = "hehe 😏 I knew it. I love you Abhi 💖";
+      noBtn.style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

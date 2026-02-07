@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #ffd6e8, #fff);
+  text-align: center;
+  color: #444;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  color: #ff4d88;
+  font-size: 2.5rem;
+}
+
+.hero-img {
+  width: 80%;
+  max-width: 320px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* SLIDESHOW */
+.slideshow {
+  width: 90%;
+  max-width: 350px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.slides {
+  display: flex;
+  animation: slide 40s infinite;
+}
+
+.slides img {
+  width: 100%;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
+
+/* MESSAGE */
+.message {
+  padding: 30px;
+  font-size: 1.1rem;
+}
+
+.signature {
+  color: #ff4d88;
+  font-weight: bold;
+}
+
+/* PROPOSAL */
+.proposal {
+  padding: 40px 20px;
+}
+
+.proposal h2 {
+  color: #ff2f6d;
+  font-size: 2rem;
+}
+
+.buttons button {
+  background: #ff4d88;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  margin: 10px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#reaction {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #ff2f6d;
+}
